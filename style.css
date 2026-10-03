@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    width: 95%;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.small {
+    font-size: 11px;
+    letter-spacing: 4px;
+    opacity: 0.5;
+}
+
+h1 {
+    margin: 5px 0;
+    font-size: 30px;
+}
+
+#status {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid #333;
+    background: #111;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.chord,
+.gesture {
+    position: absolute;
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+}
+
+.chord {
+    top: 20px;
+    left: 20px;
+}
+
+.gesture {
+    top: 20px;
+    right: 20px;
+}
+
+.overlay span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+.overlay strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.meters {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.meters > div {
+    flex: 1;
+}
+
+.meters span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+.bar {
+    height: 5px;
+    background: #222;
+    margin-top: 8px;
+}
+
+.bar div {
+    height: 100%;
+    width: 0%;
+    background: white;
+    transition: width 0.1s;
+}

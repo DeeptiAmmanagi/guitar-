@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gesture Music</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+            <div>
+                <span class="small">GESTURE.LIVE</span>
+                <h1>Gesture Music</h1>
+            </div>
+
+            <div id="status">CAMERA OFFLINE</div>
+        </header>
+
+        <main>
+
+            <div class="camera-container">
+
+                <video
+                    id="webcam"
+                    autoplay
+                    playsinline>
+                </video>
+
+                <canvas id="output"></canvas>
+
+                <div class="overlay">
+
+                    <div class="chord">
+                        <span>CHORD</span>
+                        <strong id="chord">--</strong>
+                    </div>
+
+                    <div class="gesture">
+                        <span>GESTURE</span>
+                        <strong id="gesture">--</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="controls">
+
+                <button id="startCamera">
+                    START CAMERA
+                </button>
+
+                <button id="startAudio">
+                    START AUDIO
+                </button>
+
+            </div>
+
+            <div class="meters">
+
+                <div>
+                    <span>VOLUME</span>
+
+                    <div class="bar">
+                        <div id="volumeBar"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <span>PITCH</span>
+
+                    <div class="bar">
+                        <div id="pitchBar"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Tone.js audio engine -->
+    <script src="https://cdn.jsdelivr.net/npm/tone@15.1.22/build/Tone.js"></script>
+
+    <!-- Our JavaScript -->
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
